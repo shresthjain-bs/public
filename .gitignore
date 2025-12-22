@@ -1,2 +1,7 @@
 # Downloaded images directory
 alt-text-data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
