@@ -9,7 +9,6 @@ import sys
 import csv
 import urllib.request
 import urllib.error
-from pathlib import Path
 from urllib.parse import urlparse
 
 # Configuration
@@ -52,7 +51,7 @@ def get_file_extension(url, content_type=None):
 def download_image(url, output_path):
     """
     Download an image from URL and save to output_path.
-    Returns True if successful, False otherwise.
+    Returns (success, final_path) tuple where final_path is the actual saved file path.
     """
     try:
         # Create a request with a user agent to avoid potential blocks
@@ -68,16 +67,19 @@ def download_image(url, output_path):
             # Read the image data
             image_data = response.read()
             
-            # If output_path doesn't have extension, add one
-            if not os.path.splitext(output_path)[1]:
+            # Determine the final output path with extension
+            base_path, existing_ext = os.path.splitext(output_path)
+            if not existing_ext:
                 ext = get_file_extension(url, content_type)
-                output_path = output_path + ext
+                final_output_path = base_path + ext
+            else:
+                final_output_path = output_path
             
             # Write the image to file
-            with open(output_path, 'wb') as f:
+            with open(final_output_path, 'wb') as f:
                 f.write(image_data)
             
-            return True, output_path
+            return True, final_output_path
     
     except urllib.error.HTTPError as e:
         print(f"  HTTP Error {e.code}: {url}")
@@ -105,14 +107,14 @@ def main():
     successful_context = 0
     failed_downloads = 0
     
-    # Count total rows first for accurate progress reporting
-    with open(CSV_FILE, 'r', encoding='utf-8') as csvfile:
-        total_rows = sum(1 for _ in csv.DictReader(csvfile))
-    
+    # Read all rows at once for accurate progress reporting
     with open(CSV_FILE, 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
-        
-        for row_num, row in enumerate(reader, start=1):
+        rows = list(reader)
+    
+    total_rows = len(rows)
+    
+    for row_num, row in enumerate(rows, start=1):
             base_url = row.get('base_url', '').strip()
             context_url = row.get('context_url', '').strip()
             image_id = row.get('image_id', '').strip()
