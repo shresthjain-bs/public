@@ -115,41 +115,41 @@ def main():
     total_rows = len(rows)
     
     for row_num, row in enumerate(rows, start=1):
-            base_url = row.get('base_url', '').strip()
-            context_url = row.get('context_url', '').strip()
-            image_id = row.get('image_id', '').strip()
-            
-            if not image_id:
-                print(f"Row {row_num}: Missing image_id, skipping...")
-                continue
-            
-            print(f"[{row_num}/{total_rows}] Processing: {image_id}")
-            
-            # Download base image
-            if base_url:
-                base_output = os.path.join(OUTPUT_DIR, f"{image_id}_base")
-                success, final_path = download_image(base_url, base_output)
-                if success:
-                    successful_base += 1
-                    print(f"  ✓ Base image saved: {os.path.basename(final_path)}")
-                else:
-                    failed_downloads += 1
+        base_url = row.get('base_url', '').strip()
+        context_url = row.get('context_url', '').strip()
+        image_id = row.get('image_id', '').strip()
+        
+        if not image_id:
+            print(f"Row {row_num}: Missing image_id, skipping...")
+            continue
+        
+        print(f"[{row_num}/{total_rows}] Processing: {image_id}")
+        
+        # Download base image
+        if base_url:
+            base_output = os.path.join(OUTPUT_DIR, f"{image_id}_base")
+            success, final_path = download_image(base_url, base_output)
+            if success:
+                successful_base += 1
+                print(f"  ✓ Base image saved: {os.path.basename(final_path)}")
             else:
-                print(f"  ⚠ No base_url provided")
-            
-            # Download context image
-            if context_url:
-                context_output = os.path.join(OUTPUT_DIR, f"{image_id}_context")
-                success, final_path = download_image(context_url, context_output)
-                if success:
-                    successful_context += 1
-                    print(f"  ✓ Context image saved: {os.path.basename(final_path)}")
-                else:
-                    failed_downloads += 1
+                failed_downloads += 1
+        else:
+            print(f"  ⚠ No base_url provided")
+        
+        # Download context image
+        if context_url:
+            context_output = os.path.join(OUTPUT_DIR, f"{image_id}_context")
+            success, final_path = download_image(context_url, context_output)
+            if success:
+                successful_context += 1
+                print(f"  ✓ Context image saved: {os.path.basename(final_path)}")
             else:
-                print(f"  ⚠ No context_url provided")
-            
-            print()  # Empty line for readability
+                failed_downloads += 1
+        else:
+            print(f"  ⚠ No context_url provided")
+        
+        print()  # Empty line for readability
     
     # Print summary
     print("-" * 60)
