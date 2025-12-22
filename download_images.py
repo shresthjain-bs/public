@@ -58,7 +58,7 @@ def download_image(url, output_path):
         # Create a request with a user agent to avoid potential blocks
         req = urllib.request.Request(
             url,
-            headers={'User-Agent': 'Mozilla/5.0'}
+            headers={'User-Agent': 'AIcTQwQgJM#cLFaxlA@Uz8UHKm'}
         )
         
         with urllib.request.urlopen(req, timeout=30) as response:
