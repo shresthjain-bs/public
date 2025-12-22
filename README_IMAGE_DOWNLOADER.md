@@ -28,6 +28,7 @@ python3 download_images.py
 
 ## Features
 
+- **Custom User-Agent**: Uses the specific User-Agent header `AIcTQwQgJM#cLFaxlA@Uz8UHKm` for all requests
 - **Error handling**: Gracefully handles network errors, missing URLs, and HTTP errors
 - **Progress reporting**: Shows progress for each image download
 - **Summary statistics**: Reports total downloads, successes, and failures
