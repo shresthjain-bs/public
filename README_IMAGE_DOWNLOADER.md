@@ -47,4 +47,4 @@ This directory is excluded from git via `.gitignore`.
 
 ## Notes
 
-The script processes all 2057+ entries in the CSV file. Depending on network conditions, this may take some time to complete.
+The script processes all entries in the CSV file. Depending on network conditions and the number of images, this may take some time to complete.

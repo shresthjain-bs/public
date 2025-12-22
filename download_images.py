@@ -101,16 +101,18 @@ def main():
     print("-" * 60)
     
     # Read CSV and download images
-    total_rows = 0
     successful_base = 0
     successful_context = 0
     failed_downloads = 0
+    
+    # Count total rows first for accurate progress reporting
+    with open(CSV_FILE, 'r', encoding='utf-8') as csvfile:
+        total_rows = sum(1 for _ in csv.DictReader(csvfile))
     
     with open(CSV_FILE, 'r', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         
         for row_num, row in enumerate(reader, start=1):
-            total_rows += 1
             base_url = row.get('base_url', '').strip()
             context_url = row.get('context_url', '').strip()
             image_id = row.get('image_id', '').strip()
