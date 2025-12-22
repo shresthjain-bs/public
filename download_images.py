@@ -14,6 +14,8 @@ from urllib.parse import urlparse
 # Configuration
 CSV_FILE = "alt-text-data.csv"
 OUTPUT_DIR = "alt-text-data"
+# Custom User-Agent header required for downloading images
+USER_AGENT = "AIcTQwQgJM#cLFaxlA@Uz8UHKm"
 
 def get_file_extension(url, content_type=None):
     """
@@ -57,7 +59,7 @@ def download_image(url, output_path):
         # Create a request with a user agent to avoid potential blocks
         req = urllib.request.Request(
             url,
-            headers={'User-Agent': 'AIcTQwQgJM#cLFaxlA@Uz8UHKm'}
+            headers={'User-Agent': USER_AGENT}
         )
         
         with urllib.request.urlopen(req, timeout=30) as response:
