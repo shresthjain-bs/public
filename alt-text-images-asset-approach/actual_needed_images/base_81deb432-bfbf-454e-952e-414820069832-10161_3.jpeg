@@ -1,0 +1,1970 @@
+
+<!DOCTYPE HTML>
+
+<html data-country="us" data-locale="en-US" dir="ltr" lang="en-US">
+
+
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Homepage | Anaac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    
+    <meta name="description" content="Homepage | Anaac"/>
+    <meta name="template" content="t10-home"/>
+    
+    
+    <meta name="robots" content="index,follow"/>
+    
+    <meta name="baidu-site-verification" content=""/>
+    
+
+    
+    
+    
+    <link rel="canonical" href="https://my.anaac.net/us/en"/>
+    
+      
+      
+    
+      <link rel="alternate" href="https://my.anaac.net/us/en" hreflang="en-US"/>
+      
+    
+    
+    
+    <script type="application/ld+json">
+      {
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "url": "https://my.anaac.net/us/en"
+}
+    </script>
+    <script>
+      if (window.rawData == undefined) {
+        window.rawData = [];
+      }
+    </script>
+    
+    
+      
+      
+      
+     
+     
+     
+     
+          <!-- OneTrust Cookies Consent Notice start for my.anaac.net -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/019145ca-e07f-7ca1-a16a-c4e31f924bdc/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="019145ca-e07f-7ca1-a16a-c4e31f924bdc"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for my.anaac.net -->
+
+<!-- Start VWO Async SmartCode with Strict Optanon Consent -->
+<script>
+  function isConsentGiven() {
+    var activeGroups = window.OptanonActiveGroups;
+
+    // Check for the 'OptanonAlertBoxClosed' cookie
+    var optanonClosed = document.cookie.split('; ').find(row => row.startsWith('OptanonAlertBoxClosed'));
+
+    if (!optanonClosed) {
+      return 3; // Banner not closed yet
+    } else {
+      return activeGroups && activeGroups.split(',').indexOf('C0002') > -1 ? 1 : 2;
+      // 1 = consent given, 2 = consent denied
+    }
+  }
+
+  // Initialize VWO only if consent is given
+  function initVWO() {
+    var consentState = isConsentGiven();
+
+    window.VWO = window.VWO || [];
+    window.VWO.init = window.VWO.init || function (state) { window.VWO.consentState = state; };
+    window.VWO.init(consentState);
+
+    // STRICTER: Only load VWO if explicit consent is given (state 1)
+    if (consentState === 1) {
+      var account_id = 391081; //THIS IS THE DEFAULT ID, POSSIBLY NEEDDS TO CHANGE WHEN IMPLEMENTED FOR OTHER WEBSITES
+      var version = 2.2;
+      var settings_tolerance = 2000;
+      var hide_element = 'body';
+      var background_color = 'white';
+      var hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:' + background_color + ' !important;transition:none !important;';
+
+      // VWO main code (minified for brevity)
+      window._vwo_code || (function () {
+        var w = window, d = document;
+        if (d.URL.indexOf('__vwo_disable__') > -1 || w._vwo_code) { return; }
+
+        // Rest of your VWO code here
+        /* DO NOT EDIT BELOW THIS LINE */
+        f = !1, v = d.querySelector('#vwoCode'), cc = {}; try { var e = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config')); cc = e && 'object' == typeof e ? e : {} } catch (e) { } function r(t) { try { return decodeURIComponent(t) } catch (e) { return t } } var s = function () { var e = { combination: [], combinationChoose: [], split: [], exclude: [], uuid: null, consent: null, optOut: null }, t = d.cookie || ''; if (!t) return e; for (var n, i, o = /(?:^|;s*)(?:(_vis_opt_exp_(d+)_combi=([^;]*))|(_vis_opt_exp_(d+)_combi_choose=([^;]*))|(_vis_opt_exp_(d+)_split=([^:;]*))|(_vis_opt_exp_(d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g; null !== (n = o.exec(t));)try { n[1] ? e.combination.push({ id: n[2], value: r(n[3]) }) : n[4] ? e.combinationChoose.push({ id: n[5], value: r(n[6]) }) : n[7] ? e.split.push({ id: n[8], value: r(n[9]) }) : n[10] ? e.exclude.push({ id: n[11] }) : n[12] ? e.optOut = r(n[13]) : n[14] ? e.optOut = !0 : n[15] ? e.uuid = r(n[16]) : n[17] && (i = r(n[18]), e.consent = i && 3 <= i.length ? i.substring(0, 3) : null) } catch (e) { } return e }(); function i() { var e = function () { if (w.VWO && Array.isArray(w.VWO)) for (var e = 0; e < w.VWO.length; e++) { var t = w.VWO[e]; if (Array.isArray(t) && ('setVisitorId' === t[0] || 'setSessionId' === t[0])) return !0 } return !1 }(), t = 'a=' + account_id + '&u=' + encodeURIComponent(w._vis_opt_url || d.URL) + '&vn=' + version + ('undefined' != typeof platform ? '&p=' + platform : '') + '&st=' + w.performance.now(); e || ((n = function () { var e, t = [], n = {}, i = w.VWO && w.VWO.appliedCampaigns || {}; for (e in i) { var o = i[e] && i[e].v; o && (t.push(e + '-' + o + '-1'), n[e] = !0) } if (s && s.combination) for (var r = 0; r < s.combination.length; r++) { var a = s.combination[r]; n[a.id] || t.push(a.id + '-' + a.value) } return t.join('|') }()) && (t += '&c=' + n), (n = function () { var e = [], t = {}; if (s && s.combinationChoose) for (var n = 0; n < s.combinationChoose.length; n++) { var i = s.combinationChoose[n]; e.push(i.id + '-' + i.value), t[i.id] = !0 } if (s && s.split) for (var o = 0; o < s.split.length; o++)t[(i = s.split[o]).id] || e.push(i.id + '-' + i.value); return e.join('|') }()) && (t += '&cc=' + n), (n = function () { var e = {}, t = []; if (w.VWO && Array.isArray(w.VWO)) for (var n = 0; n < w.VWO.length; n++) { var i = w.VWO[n]; if (Array.isArray(i) && 'setVariation' === i[0] && i[1] && Array.isArray(i[1])) for (var o = 0; o < i[1].length; o++) { var r, a = i[1][o]; a && 'object' == typeof a && (r = a.e, a = a.v, r && a && (e[r] = a)) } } for (r in e) t.push(r + '-' + e[r]); return t.join('|') }()) && (t += '&sv=' + n)), s && s.optOut && (t += '&o=' + s.optOut); var n = function () { var e = [], t = {}; if (s && s.exclude) for (var n = 0; n < s.exclude.length; n++) { var i = s.exclude[n]; t[i.id] || (e.push(i.id), t[i.id] = !0) } return e.join('|') }(); return n && (t += '&e=' + n), s && s.uuid && (t += '&id=' + s.uuid), s && s.consent && (t += '&consent=' + s.consent), w.name && -1 < w.name.indexOf('_vis_preview') && (t += '&pM=true'), w.VWO && w.VWO.ed && (t += '&ed=' + w.VWO.ed), t } code = { nonce: v && v.nonce, library_tolerance: function () { return 'undefined' != typeof library_tolerance ? library_tolerance : void 0 }, settings_tolerance: function () { return cc.sT || settings_tolerance }, hide_element_style: function () { return '{' + (cc.hES || hide_element_style) + '}' }, hide_element: function () { return performance.getEntriesByName('first-contentful-paint')[0] ? '' : 'string' == typeof cc.hE ? cc.hE : hide_element }, getVersion: function () { return version }, finish: function (e) { var t; f || (f = !0, (t = d.getElementById('_vis_opt_path_hides')) && t.parentNode.removeChild(t), e && ((new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e)) }, finished: function () { return f }, addScript: function (e) { var t = d.createElement('script'); t.type = 'text/javascript', e.src ? t.src = e.src : t.text = e.text, v && t.setAttribute('nonce', v.nonce), d.getElementsByTagName('head')[0].appendChild(t) }, load: function (e, t) { t = t || {}; var n = new XMLHttpRequest; n.open('GET', e, !0), n.withCredentials = !t.dSC, n.responseType = t.responseType || 'text', n.onload = function () { if (t.onloadCb) return t.onloadCb(n, e); 200 === n.status ? _vwo_code.addScript({ text: n.responseText }) : _vwo_code.finish('&e=loading_failure:' + e) }, n.onerror = function () { if (t.onerrorCb) return t.onerrorCb(e); _vwo_code.finish('&e=loading_failure:' + e) }, n.send() }, init: function () { var e, t = this.settings_tolerance(); w._vwo_settings_timer = setTimeout(function () { _vwo_code.finish() }, t), 'body' !== this.hide_element() ? (n = d.createElement('style'), e = (t = this.hide_element()) ? t + this.hide_element_style() : '', t = d.getElementsByTagName('head')[0], n.setAttribute('id', '_vis_opt_path_hides'), v && n.setAttribute('nonce', v.nonce), n.setAttribute('type', 'text/css'), n.styleSheet ? n.styleSheet.cssText = e : n.appendChild(d.createTextNode(e)), t.appendChild(n)) : (n = d.getElementsByTagName('head')[0], (e = d.createElement('div')).style.cssText = 'z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background:' + background_color + ' !important;', e.setAttribute('id', '_vis_opt_path_hides'), e.classList.add('_vis_hide_layer'), n.parentNode.insertBefore(e, n.nextSibling)); var n = 'https://dev.visualwebsiteoptimizer.com/j.php?' + i(); -1 !== w.location.search.indexOf('_vwo_xhr') ? this.addScript({ src: n }) : this.load(n + '&x=true', { l: 1 }) } }; w._vwo_code = code; code.init();
+      })();
+    } else {
+    }
+  }
+
+  // Listen for OneTrust consent changes
+  function setupOneTrustListener() {
+    if (window.Optanon) {
+      window.Optanon.OnConsentChanged(function () {
+        initVWO(); // Re-check consent and initialize VWO if needed
+      });
+    } else {
+      setTimeout(setupOneTrustListener, 500); // Try again in 500ms
+    }
+  }
+
+  // Initial check
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initVWO();
+      setupOneTrustListener();
+    });
+  } else {
+    initVWO();
+    setupOneTrustListener();
+  }
+</script>
+
+<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com/"/>
+<!-- End VWO Async SmartCode -->
+     
+          
+     
+    
+    
+
+    
+    
+
+
+
+
+<script data-ot-ignore src="//assets.adobedtm.com/feb986e74bf7/f95cb7da5d29/launch-532cb729038f.min.js" async></script>
+
+
+
+
+
+
+
+
+    
+
+    
+  
+    
+<link rel="stylesheet" href="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-base.min.d90632675378cdea92e8d65dda23518a.css" type="text/css">
+
+
+
+  
+  
+    
+<link rel="stylesheet" href="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-site-gripgard.min.e1c700a3f7ddcac5e2926a18d88acc1d.css" type="text/css">
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+    
+  
+  
+  
+  
+    
+<link rel="stylesheet" href="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-react-app.min.735e21e37a29204f843d73a6d3d441ff.css" type="text/css">
+
+
+
+
+
+    
+    
+    
+
+    
+
+    
+    
+    
+
+    
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/content/dam/akzonobel-coatings/anaac/favicon/apple-touch-icon-180x180.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/content/dam/akzonobel-coatings/anaac/favicon/icon-192x192.png"/>
+  <link rel="icon" type="image/png" sizes="512x512" href="/content/dam/akzonobel-coatings/anaac/favicon/icon-512x512.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/content/dam/akzonobel-coatings/anaac/favicon/icon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/content/dam/akzonobel-coatings/anaac/favicon/icon-16x16.png"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/content/dam/akzonobel-coatings/anaac/favicon/favicon.ico"/>
+
+
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+   
+    
+    
+    
+
+    
+    
+
+    
+    
+
+    <script>
+      var woodStainBaseUrl = 'https://codtranslucent-tst.azureedge.net/api/colors/';
+      window.pageInfo = {
+        generic: {
+          environment: 'prod',
+          dataLayerVersion: '2020may',
+          siteCode: 'nuswac',
+          colorPopupFlag: 'false',
+          displayShippingInformation: 'false'
+        },
+        user: {
+          userID: undefined
+        },
+        page: {
+          info: {
+            ID: '7e365377-408c-3877-870a-d778d70817c6',
+            name: 'Homepage',
+            version: '202502130926',
+            language: 'en-US',
+            geoRegion: 'US',
+            brand: 'Anaac'
+          },
+          visualizationInfo: {
+            environment: 'prod',
+            siteCode: 'nuswac',
+            language: 'en-US',
+            brand: 'Anaac',
+            name: 'Homepage'
+          },
+          category: {
+            pageType: 'Homepage',
+            primaryCategory: 'Home',
+            subCategory1: undefined,
+            subCategory2: undefined,
+            subCategory3: undefined,
+            subCategory4: undefined,
+            subCategory5: undefined,
+            templateName: 't10-home'
+          },
+          attributes: {
+            functionalityVersion: '0'
+          }
+        },
+        products: {
+          info: {
+            ID: undefined,
+            name: undefined,
+            brand: undefined,
+            colourID: undefined,
+            colourName: undefined,
+            colourCollectionID: undefined,
+            colourCollectionName: undefined,
+            glossGroup: undefined,
+            finishEffect: undefined,
+            texture: undefined,
+          },
+          category: {
+            subCategory1: undefined,
+            subCategory2: undefined,
+            subCategory3: undefined,
+            productType: undefined,
+            primaryCategory: undefined,
+          }
+        }
+      };
+
+      window.globalData = {
+        errorMessages: {
+          presence: 'This value is required.',
+          email: 'The provided email is invalid.',
+          includesCapital: 'The value must contain at least one capital.',
+          includesSpecialCharactersOrNumber: 'The value must contain one number or special character.',
+          tooShort: 'This value must be at least %{count} characters.',
+          phoneNumber: 'The provided phone number is invalid',
+          telephoneNumber:'The provided telephone number is invalid',
+          checkbox: 'This checkbox is required.',
+          numericality: 'This value can only contain numbers.',
+          equality: 'This value must be equal to %{attribute}',
+          inequality: 'This value should not be equal to current password.',
+          recaptcha: 'The captcha is required.',
+          atLeast: 'Select at least one value',
+          blockedEmailMessage: 'Emails from this domain are not allowed.'
+        },
+        api: {
+          scrapbook: '/bin/api/scrapbook?domainCode=nuswac',
+          shoppingList: '',
+          cartGet: '/api/order/cart_details',
+          cartAdd: '/api/v2/cart',
+          cartStock: '/api/stock/sku',
+          orderHistory: '/api/order/history',
+          stock: '/api/stock',
+          userLogin: '/bin/api/login?page=/content/akzonobel-coatings/anaac/us/en',
+          colorPopUp: '/bin/api/colorPopUp?page=/content/akzonobel-coatings/anaac/us/en',
+          userLogout: '/bin/api/logout',
+          userStatus: '/bin/api/status?domainCode=nuswac',
+          b2cUserStatus: '/bin/api/b2c-sso?path=/content/akzonobel-coatings/anaac/us/en&domainCode=nuswac',
+          userRecovery: '/bin/api/password?page=/content/akzonobel-coatings/anaac/us/en&domainCode=nuswac',
+          userForgot: '/bin/api/forgot-password?domainCode=nuswac&page=/content/akzonobel-coatings/anaac/us/en',
+          order: '/api/order',
+          documents: '/bin/api/documents?domainCode=nuswac&language=en',
+          storeLocationsOffices: '/bin/api/v2/store-locations-list',
+          storeLocations: '/bin/api/v2/store-locations-countries',
+          salesLocationsOffices: '/bin/api/v2/sales-representatives',
+          salesLocations: '/bin/api/v2/sales-representatives',
+          vocProducts: '/bin/api/v1/calculator/build?page=/content/akzonobel-coatings/anaac/us/en',
+          woodStainBaseUrl: woodStainBaseUrl
+        },
+        translations: {
+          genericRequestError: "Something has gone wrong, please try again.",
+          accountSuccessMessage: "Details updated Successfully",
+          colorScrapbookSuccessMessage: "Color added to <a href=\"/#\">My Favourites</a>.",
+          articleScrapbookSuccessMessage: "Article added to <a href=\"/#\">My Favourites</a>.",
+          productScrapbookSuccessMessage:"Product added to <a href=\"/#\">My Favourites</a>.",
+          loginScrapbookMessage:  "You are not logged in! To view or save your project make sure you <button type='button' class='js-login-button'>Login</button> or <button type ='button' class='js-register-button'> Sign up</button>",
+          addToCartSuccessMessage: "Product was successfully added to your cart",
+          addToCartOutOfStockMessage: "The product is out of stock",
+          kilometers: "km",
+          miles: "miles",
+          squareMeters: "m²",
+          compare: "Compare",
+          seeCompared:"See compared",
+          contactFormSentButton:"Sent",
+          contactFormSendButton:"Send",
+          productWorkspaceSuccessMessage: "We’ve added your product to <a href=\"?spaceId={spaceId}\">Your {spaceName} space</a>.",
+          colorWorkspaceSuccessMessage: "We’ve added your color to  <a href=\"?spaceId={spaceId}\">Your {spaceName} space</a>.",
+          removeProductFromWorkspace: "We’ve deleted the product. <button type='button' data-item-id='{itemId}' data-item-type='{type}'class='js-undo-button'>Undo</button>",
+          removeColorFromWorkspace: "We’ve deleted the color. <button type='button' data-item-id='{itemId}' data-item-type='{type}'class='js-undo-button'>Undo</button>",
+          addToShoppingList: "We’ve added {product} to your <a href=\"\">shopping list</a>.",
+          removeFromShoppingList: "We’ve removed {product} from your <a href=\"\">shopping list</a>.",
+          removeTesterShoppingList: "We’ve removed drytester from your <a href=\"\">shopping list</a>.",
+          buyNow:"Buy from retailer",
+          acceptCookies:"Please accept all cookies if you want to view the videos"
+        },
+        url: {
+          comparePagePath: ''
+        },
+        config: {
+          enableScrapbook:false,
+          enableSurvey:true
+        },
+        bazaarVoice: {
+          enabled: false,
+          environment: 'production',
+          brand: '',
+          country: 'US',
+          locale: 'en'
+        }
+      };
+      try {
+        window.userObj = JSON.parse(window.localStorage.getItem("loginSession"));
+        <!--/* Some of the clientlibs rewrites userID and set it to empty value. This code invokes after libs are loaded. */-->
+        window.addEventListener("load", function(){
+          window.pageInfo.user.userID = window.userObj?.uuid;
+        });
+      } catch (e) {
+        window.userObj = null;
+      }
+    </script>
+  </head>
+
+
+<body class="home-page page basicpage font-en-US  style-extreme-left-align" data-theme="gripgard" data-sitecode="nuswac" data-editor="false">
+      <a href="#app" class="skip-link">Skip to main content</a>
+
+
+
+
+
+
+  
+
+
+
+  <main id="app">
+  <div data-component="app-root" class="app-root" data-page-id="/content/akzonobel-coatings/anaac/us/en/jcr:content">
+    
+    
+  
+
+  <div data-component="a41-alert" class="a41-alert" role="alert" data-type="info">
+    <div class="content-wrapper s-no-padding">
+      <div class="grid">
+        <div class="col col-12">
+          <div class="alert-body body-copy-xs ">
+            <div class="js-icon">
+              
+            </div>
+            <div class="js-alert-body">
+              
+            </div>
+            <button class="close-button js-close-button" aria-label="Close the alert">
+              
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    
+    
+
+
+
+
+
+
+
+
+<header data-component="s1-header" data-id="s1_header_copy_copy-1505091385" data-back-ground-color="false" data-azureb2c-enabled="false" data-is-geolocation-site-switcher="false" class="s1-header full-layout cp-top-spacing-none cp-bottom-spacing-none style-default  " data-geolocation-content-api="/bin/api/languagelist?countryPagePath=/content/akzonobel-coatings/anaac/us/en" data-scroll-component>
+  <div class="header-backdrop js-backdrop"></div>
+  <nav>
+    
+
+  <div class="m60-corporate-bar full-layout " data-component="m60-corporate-bar" data-is-gradient="false">
+    <div class="content-wrapper s-no-padding">
+      
+      
+      
+      
+      <div class="global-switch">
+        <a href="/us/en/country-selector" class="global body-copy-xs">
+           <span class="regionName">United States </span>
+          
+  <span class="icon " data-component="icon" data-icon="chevron-right"></span>
+
+        </a>
+      </div>
+      <div class="corporate-logo">
+          
+            
+        
+        <a href="https://www.akzonobel.com" target="_blank" aria-label="Corporate logo">
+  <span class="icon " data-component="icon" data-icon="akzoNobel-logo"></span>
+</a>
+        
+      </div>
+    </div>
+  </div>
+
+
+    <div class="content-wrapper main-nav-wrapper js-main-nav">
+      <div class="grid">
+        <button class="hamburger-icon js-menu-button" aria-label="Menu">
+          <span class="hamburger-bars"></span>
+        </button>
+        <div class="col logo-wrapper col-3 col-m-2 ">
+          <a href="https://my.anaac.net/us/en" class="logo js-logo " aria-label="Logo">
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/anaac-logo.png?impolicy=.auto"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/anaac-logo.png?impolicy=.auto" alt="Brand Logo" class="image js-normal-image    lazyload" itemprop="image"/>
+  </picture>
+
+          </a>
+        </div>
+        <div class="col col-5 col-l-10 navigation-wrapper" data-longer-logo="0">
+          
+  <div class="m29-primary-navigation" data-component="m29-primary-navigation">
+    <div class="primary-navigation-wrapper js-primary-navigation-wrapper">
+        <ul class="navigation-menu">
+
+          
+          <li class="  body-copy-s">
+            <a aria-haspopup="false" aria-expanded="false" target="_self" href="/us/en/msds">
+              <span class="menu-title">
+                MSDS
+              </span>
+              
+              
+            </a>
+            
+          </li>
+        
+
+          
+          <li class="has-dropdown  body-copy-s">
+            <button class="js-dropdown-item custom-btn" aria-haspopup="true" aria-expanded="false" target="_self" href="/content/akzonobel-coatings/anaac/us/en/support.html">
+              <span class="menu-title">
+                Support
+              </span>
+              
+              
+  <span class="icon " data-component="icon" data-icon="chevron-down"></span>
+
+            </button>
+            <ul class="sub-menu js-sub-item">
+              <li>
+                <a href="https://www.mixitcloud.com/" target="_self">
+                  Mixit</a>
+              </li>
+<li>
+                <a href="/us/en/support/downloads" target="_self">
+                  Downloads</a>
+              </li>
+
+            </ul>
+          </li>
+        
+
+          
+          <li class="  body-copy-s">
+            <a aria-haspopup="false" aria-expanded="false" target="_self" href="/us/en/brands">
+              <span class="menu-title">
+                Brands
+              </span>
+              
+              
+            </a>
+            
+          </li>
+        </ul>
+    </div>
+
+    
+
+  <div class="m60-corporate-bar full-layout " data-component="m60-corporate-bar" data-is-gradient="false">
+    <div class="content-wrapper s-no-padding">
+      
+      
+      
+      
+      <div class="global-switch">
+        <a href="/us/en/country-selector" class="global body-copy-xs">
+           <span class="regionName">United States </span>
+          
+  <span class="icon " data-component="icon" data-icon="chevron-right"></span>
+
+        </a>
+      </div>
+      <div class="corporate-logo">
+          
+            
+        
+        <a href="https://www.akzonobel.com" target="_blank" aria-label="Corporate logo">
+  <span class="icon " data-component="icon" data-icon="akzoNobel-logo"></span>
+</a>
+        
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+          
+  <div class="m43-secondary-navigation" data-component="m43-secondary-navigation">
+    
+    
+    
+    
+    
+
+    <ul class="secondary-navigation-menu">
+
+      
+
+      
+
+      
+
+
+      
+
+      
+      
+      
+    </ul>
+
+    
+
+  </div>
+
+        </div>
+      </div>
+      <div class="notification-wrapper js-notifications">
+        
+      </div>
+    </div>
+
+    
+    
+    <div class="suggestion-container js-suggestion-container" data-no-results-title="No Results found" data-show-all-label="Show All Results" data-show-all-url="#" data-is-author="false" data-product-label="Products label" data-is-sustainable2d-enabled="false" data-default-wood-type="dark">
+    </div>
+  </nav>
+  
+</header>
+
+
+
+
+
+
+
+
+
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="cmp cmp-c12-hero-banner style-appearance-primary-brand-3 style-left aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <div></div>
+
+
+
+
+
+
+
+
+<section data-component="c12-hero-banner" data-id="c12_hero_banner_copy_1448390120-323600119" data-hammerite-back-ground-color="false" data-interpon-hero-image-size="false" class="c12-hero-banner cp-top-spacing-none  cp-bottom-spacing-none  style-appearance-primary-brand-3 style-left  " style="background-color: " data-scroll-component>  
+  
+  <div class="background-image">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/home.png?impolicy=.auto&imwidth=375"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/home.png?impolicy=.auto&imwidth=1900" class="image js-normal-image fit-cover   lazyload" itemprop="image"/>
+  </picture>
+
+  </div>
+  
+  <div class="content-wrapper s-no-padding gradient-bg">
+    <div class="grid">
+      
+      <div class="col col-12 col-m-6 col-l-5 w-col-60">
+        
+        
+        <div class="text-block styled-appearance-container gradient-box-full-width " style="background-color: #FFFFFFAA">
+          
+  
+    
+    <div class="m5-text-block  " data-component="m5-text-block" style="color: ">
+    <div>
+      
+  
+  
+  
+  
+  
+  
+  
+
+  <div class="a1-heading" data-component="a1-heading" style="color: ">
+    <div class="js-camp-temp-heading-text">
+      
+      <h1 class="heading-title header-02" data-transition-item>
+        
+        
+          
+          
+            AkzoNobel Customer Service Portal
+          
+        
+      </h1>
+      
+      
+  </div>
+  </div>
+  
+
+    </div>
+      
+  
+      
+      
+    </div>
+  
+        </div>
+      </div>
+
+      
+      
+      
+      
+
+    </div>
+  </div>
+</section>
+
+
+
+
+</div>
+<div class="cmp cmp-c43-related-content aem-GridColumn aem-GridColumn--default--12">
+
+
+<section data-component="c43-related-content" data-id="c43_related_content_-736010215" class="c43-related-content cp-top-spacing-none cp-bottom-spacing-none
+style-default  has--item width-25" style="background-color: ;" data-scroll-component>
+  <div class="content-wrapper xs-no-padding">
+    
+
+  <div class="m8-related-items" data-component="m8-related-items" data-item-type="content-block">
+    <div class="grid">
+      <div class="col col-12">
+        <div class="related-items-header">
+          
+  
+  
+  
+  
+  
+  
+  
+
+  <div class="a1-heading" data-component="a1-heading" style="color: ">
+    <div class="js-camp-temp-heading-text">
+      
+      
+      
+      
+  </div>
+  </div>
+  
+
+               
+          
+        </div>
+      </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+        
+        
+          
+          
+              
+          
+
+          <div class="col item col-12 col-m-6 col-l-3    " data-transition-item>
+
+            
+            
+
+            
+  
+  
+  
+  
+  
+  
+  
+  <a class="m9-content-card" data-component="m9-content-card" title="" data-logged-in="false" data-ssologin="false" target="_self" href="/us/en/msds">
+    
+    
+    
+      <div class="m9-content-card-second-child ">
+        <div class="content-card-media ">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/MSDS_320x179.jpg?impolicy=.auto&imwidth=320"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/MSDS_282x158.jpg?impolicy=.auto&imwidth=588" alt="MSDS" class="image js-normal-image fit-cover   lazyload" itemprop="image" role="presentation"/>
+  </picture>
+
+        
+      </div>
+        <div class="content-card-body">
+          <div class="content-title-sub">
+            <div class="card-content-wrapper">
+              
+              
+
+              <h4 class="blockquote">
+                MSDS
+              </h4>
+              
+              <div class="body-copy-rg content-card-description wysiwyg">
+                  Find Material Safety Data Sheets
+              </div>
+            </div>
+			<div class="gradient-btn">
+            
+            
+    
+    
+    
+  
+      <button class="a127-arrow-button right " data-component="a127-arrow-button" aria-label="Right Arrow" disabled="true">
+        
+  <span class="icon " data-component="icon" data-icon="arrow-right"></span>
+
+      </button>
+  
+			</div>
+			
+          </div>
+        </div>
+      </div>
+    
+  </a>
+
+          </div>
+        
+          
+          
+              
+          
+
+          <div class="col item col-12 col-m-6 col-l-3    " data-transition-item>
+
+            
+            
+
+            
+  
+  
+  
+  
+  
+  
+  
+  <a class="m9-content-card" data-component="m9-content-card" title="" data-logged-in="false" data-ssologin="false" target="_self" href="/us/en/tds">
+    
+    
+    
+      <div class="m9-content-card-second-child ">
+        <div class="content-card-media ">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/TDS_320x179.jpg?impolicy=.auto&imwidth=320"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/TDS_282x158.jpg?impolicy=.auto&imwidth=588" alt="TDS" class="image js-normal-image fit-cover   lazyload" itemprop="image" role="presentation"/>
+  </picture>
+
+        
+      </div>
+        <div class="content-card-body">
+          <div class="content-title-sub">
+            <div class="card-content-wrapper">
+              
+              
+
+              <h4 class="blockquote">
+                TDS
+              </h4>
+              
+              <div class="body-copy-rg content-card-description wysiwyg">
+                  Find Technical Data Sheets
+              </div>
+            </div>
+			<div class="gradient-btn">
+            
+            
+    
+    
+    
+  
+      <button class="a127-arrow-button right " data-component="a127-arrow-button" aria-label="Right Arrow" disabled="true">
+        
+  <span class="icon " data-component="icon" data-icon="arrow-right"></span>
+
+      </button>
+  
+			</div>
+			
+          </div>
+        </div>
+      </div>
+    
+  </a>
+
+          </div>
+        
+          
+          
+              
+          
+
+          <div class="col item col-12 col-m-6 col-l-3    " data-transition-item>
+
+            
+            
+
+            
+  
+  
+  
+  
+  
+  
+  
+  <a class="m9-content-card" data-component="m9-content-card" title="" data-logged-in="false" data-ssologin="false" target="_self" href="/us/en/support">
+    
+    
+    
+      <div class="m9-content-card-second-child ">
+        <div class="content-card-media ">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/Support_320x179.jpg?impolicy=.auto&imwidth=320"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/Support_282x158.jpg?impolicy=.auto&imwidth=588" alt="Support" class="image js-normal-image fit-cover   lazyload" itemprop="image" role="presentation"/>
+  </picture>
+
+        
+      </div>
+        <div class="content-card-body">
+          <div class="content-title-sub">
+            <div class="card-content-wrapper">
+              
+              
+
+              <h4 class="blockquote">
+                Support
+              </h4>
+              
+              <div class="body-copy-rg content-card-description wysiwyg">
+                  Get support
+              </div>
+            </div>
+			<div class="gradient-btn">
+            
+            
+    
+    
+    
+  
+      <button class="a127-arrow-button right " data-component="a127-arrow-button" aria-label="Right Arrow" disabled="true">
+        
+  <span class="icon " data-component="icon" data-icon="arrow-right"></span>
+
+      </button>
+  
+			</div>
+			
+          </div>
+        </div>
+      </div>
+    
+  </a>
+
+          </div>
+        
+          
+          
+              
+          
+
+          <div class="col item col-12 col-m-6 col-l-3    " data-transition-item>
+
+            
+            
+
+            
+  
+  
+  
+  
+  
+  
+  
+  <a class="m9-content-card" data-component="m9-content-card" title="" data-logged-in="false" data-ssologin="false" target="_blank" href="https://www.mixitcloud.com/">
+    
+    
+    
+      <div class="m9-content-card-second-child ">
+        <div class="content-card-media ">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/MIXIT_1900x765.jpg?impolicy=.auto&imwidth=320"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/MIXIT_375x210.jpg?impolicy=.auto&imwidth=588" alt="MIXIT" class="image js-normal-image fit-cover   lazyload" itemprop="image" role="presentation"/>
+  </picture>
+
+        
+      </div>
+        <div class="content-card-body">
+          <div class="content-title-sub">
+            <div class="card-content-wrapper">
+              
+              
+
+              <h4 class="blockquote">
+                MIXIT
+              </h4>
+              
+              <div class="body-copy-rg content-card-description wysiwyg">
+                  Try new online color retrieval App
+              </div>
+            </div>
+			<div class="gradient-btn">
+            
+            
+    
+    
+    
+  
+      <button class="a127-arrow-button right " data-component="a127-arrow-button" aria-label="Right Arrow" disabled="true">
+        
+  <span class="icon " data-component="icon" data-icon="arrow-right"></span>
+
+      </button>
+  
+			</div>
+			
+          </div>
+        </div>
+      </div>
+    
+  </a>
+
+          </div>
+        
+      
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+    </div>
+    
+  </div>
+
+  </div>
+
+</section>
+</div>
+<div class="cmp cmp-c43-related-content aem-GridColumn aem-GridColumn--default--12">
+
+
+<section data-component="c43-related-content" data-id="c43_related_content__576612292-210743422" class="c43-related-content cp-top-spacing-default cp-bottom-spacing-none
+style-default  has-one-item width-25" style="background-color: ;" data-scroll-component>
+  <div class="content-wrapper xs-no-padding">
+    
+
+  <div class="m8-related-items" data-component="m8-related-items" data-item-type="content-block">
+    <div class="grid">
+      <div class="col col-12">
+        <div class="related-items-header">
+          
+  
+  
+  
+  
+  
+  
+  
+
+  <div class="a1-heading" data-component="a1-heading" style="color: ">
+    <div class="js-camp-temp-heading-text">
+      
+      
+      
+      
+  </div>
+  </div>
+  
+
+               
+          
+        </div>
+      </div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+        
+        
+          
+          
+              
+          
+
+          <div class="col item     col-12" data-transition-item>
+
+            
+            
+
+            
+  
+  
+  
+  
+  
+  
+  
+  <a class="m9-content-card" data-component="m9-content-card" title="" data-logged-in="false" data-ssologin="false" target="_self" href="/us/en/brands">
+    
+    
+    
+      <div class="m9-content-card-second-child ">
+        <div class="content-card-media ">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-coatings/anaac/gl/Brands.png?impolicy=.auto&imwidth=320"/>
+    <img data-src="//images.akzonobel.com/akzonobel-coatings/anaac/gl/Brands.png?impolicy=.auto&imwidth=1366" alt="Brands" class="image js-normal-image fit-cover   lazyload" itemprop="image" role="presentation"/>
+  </picture>
+
+        
+      </div>
+        <div class="content-card-body">
+          <div class="content-title-sub">
+            <div class="card-content-wrapper">
+              
+              
+
+              <h4 class="blockquote">
+                Brands
+              </h4>
+              
+              <div class="body-copy-rg content-card-description wysiwyg">
+                  Check our brands
+              </div>
+            </div>
+			<div class="gradient-btn">
+            
+            
+    
+    
+    
+  
+      <button class="a127-arrow-button right " data-component="a127-arrow-button" aria-label="Right Arrow" disabled="true">
+        
+  <span class="icon " data-component="icon" data-icon="arrow-right"></span>
+
+      </button>
+  
+			</div>
+			
+          </div>
+        </div>
+      </div>
+    
+  </a>
+
+          </div>
+        
+      
+      
+      
+      
+      
+      
+      
+
+      
+
+      
+    </div>
+    
+  </div>
+
+  </div>
+
+</section>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section data-component="c18-logo-group" data-id="c18_footer_ctas_copy-182201159" class="c18-logo-group cp-top-spacing-none  cp-bottom-spacing-none" style="background-color:" data-scroll-component>
+  <div class="content-wrapper">
+    <div class="grid">
+      
+      
+      <div class="col col-12 col-m-12 icon-list">
+        
+
+  
+  
+  
+
+  <div class="m4-icon-list social-icons" data-component="m4-icon-list">
+    
+      <span class="body-copy-s icon-list-title">Follow Us</span>
+    
+    
+
+    
+      
+        <a href="https://www.facebook.com/AkzoNobel" target="_blank" title="Follow Us">
+          
+  <span class="icon " data-component="icon" data-icon="facebook"></span>
+
+        </a>
+        
+      
+        <a href="https://www.instagram.com/akzonobelrefinish/" target="_blank" title="Follow Us">
+          
+  <span class="icon " data-component="icon" data-icon="instagram"></span>
+
+        </a>
+        
+      
+        <a href="https://www.youtube.com/user/akzonobel" target="_blank" title="Follow Us">
+          
+  <span class="icon " data-component="icon" data-icon="youtube"></span>
+
+        </a>
+        
+      
+        <a href="https://twitter.com/AkzoNobel_AACNA" target="_blank" title="Follow Us">
+          
+  <span class="icon " data-component="icon" data-icon="twitter"></span>
+
+        </a>
+        
+      
+    
+
+    
+
+  </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+  <footer data-component="s3-secondary-footer" data-id="s3_secondary_footer_-577744703" class="s3-secondary-footer cp-top-spacing-default  cp-bottom-spacing-default" style="background-color:" data-scroll-component>
+
+    <div class="content-wrapper">
+      <div class="grid">
+        
+        <div class="col col-12 ">
+          <ul class="secondary-footer-links ">
+            
+              <li class="secondary-footer-link body-copy-s">
+                
+  
+  
+  
+
+  <a class="a2-text-link is-dark  " data-component="a2-text-link" href="/us/en/privacy-statement" target="_self">
+    
+    
+    <div class="text-link-label ">
+      
+      <span>Privacy Statement</span>
+    </div>
+    
+    
+    
+  </a>
+
+              </li>
+            
+              <li class="secondary-footer-link body-copy-s">
+                
+  
+  
+  
+
+  <a class="a2-text-link is-dark  " data-component="a2-text-link" href="/us/en/cookies-statement" target="_self">
+    
+    
+    <div class="text-link-label ">
+      
+      <span>Cookies Statement</span>
+    </div>
+    
+    
+    
+  </a>
+
+              </li>
+            
+              <li class="secondary-footer-link body-copy-s">
+                
+  
+  
+  
+
+  <a class="a2-text-link is-dark  " data-component="a2-text-link" href="/us/en/termsofuse" target="_self">
+    
+    
+    <div class="text-link-label ">
+      
+      <span>Terms of use</span>
+    </div>
+    
+    
+    
+  </a>
+
+              </li>
+            
+              <li class="secondary-footer-link body-copy-s">
+                
+  
+  
+  
+
+  <a class="a2-text-link is-dark optanon-toggle-display " data-component="a2-text-link" href="javascript:void(0);" target="_self">
+    
+    
+    <div class="text-link-label ">
+      
+      <span>Cookies Settings</span>
+    </div>
+    
+    
+    
+  </a>
+
+              </li>
+            
+              <li class="secondary-footer-link body-copy-s">
+                
+  
+  
+  
+
+  <a class="a2-text-link is-dark  " data-component="a2-text-link" href="/us/en/accessibility-statement" target="_self">
+    
+    
+    <div class="text-link-label ">
+      
+      <span>Accessibility Statement</span>
+    </div>
+    
+    
+    
+  </a>
+
+              </li>
+            
+          </ul>
+          
+        </div>
+        <div class="col col-12">
+          
+  
+
+  <div class="m2-copyright-bar" data-component="m2-copyright-bar">
+    <div class="copyright body-copy-s">Copyright © Akzo Nobel N.V. 2025</div>
+    <div class="copyright-logo">
+      <a href="https://www.akzonobel.com" target="_blank" aria-label="Copyright Logo">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <picture class="a3-image " data-component="a3-image">
+    
+    <source media="(max-width: 768px)" class="js-small-image" data-srcset="//images.akzonobel.com/akzonobel-common/akzo-nobel.png?impolicy=.auto"/>
+    <img data-src="//images.akzonobel.com/akzonobel-common/akzo-nobel.png?impolicy=.auto" class="image js-normal-image   fit-contain lazyload" itemprop="image"/>
+  </picture>
+
+      </a>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</div>
+
+
+
+
+
+
+    
+    
+
+    <div data-component="m34-text-overlay" class="m34-text-overlay">
+        <div class="mask js-mask"></div>
+        <div class="modal js-modal">
+            
+    
+    
+    <button class="a8-icon-button close-button js-close-button
+            is-transparent is-small" data-component="a8-icon-button">
+      
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+      
+    </button>
+  
+            <header>
+                <h2 class="header-04 js-title"></h2>
+            </header>
+            
+  <div class="a34-body-copy js-body-copy body-copy-s wysiwyg" data-component="a34-body-copy">
+    <div class="js-camp-temp-text-color ">
+      
+      
+    </div>
+    
+  </div>
+
+        </div>
+    </div>
+
+
+
+    
+    
+
+  
+  <div data-component="m78-video-overlay" class="m78-video-overlay" style="visibility: hidden; opacity: 0;">
+    <div class="mask js-mask"></div>
+    <div class="modal js-modal">
+      <header>
+        <h2 class="header-04 js-title"></h2>
+        
+    
+    
+    <button class="a8-icon-button close-button js-close-button
+             " data-component="a8-icon-button">
+      
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+      
+    </button>
+  
+      </header>
+      <div class="card-container js-video" data-video-url="" data-video-provider="">
+
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+  
+
+  
+
+  <div data-component="m71-wood-overlay" class="m71-wood-overlay">
+    <div class="mask js-mask"></div>
+    <div class="modal js-modal">
+      <header>
+        <h2 class="header-04 js-title"></h2>
+        
+    
+    
+    <button class="a8-icon-button close-button js-close-button
+             " data-component="a8-icon-button">
+      
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+      
+    </button>
+  
+      </header>
+      <div class="wood-container js-wood-container">
+        <div class="wood-carousel">
+        </div>
+        <h2 class="header-04 js-wood-title"></h2>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  
+<div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+  <!-- START TRANSITION COMPONENT -->
+  <section data-component="m113-select-a-color-overlay" class="m113-select-a-color-overlay" data-hue-api="/bin/api/colorPopUp?page=/content/akzonobel-flourish/dulux/in/dulux/en/products/dulux-supergloss-5in1" data-show-more="Show all colours" data-show-less="Show less" data-is-sustainable2d-enabled="false">
+    <div class="mask js-mask"></div>
+    <div class="modal js-modal">
+      <div class="content-wrapper">
+        <header>
+            <div class="col col-12 result-listing-title js-popup-heading" data-transition-item>
+              <!-- JS will load the popup heading from a1-heading -->
+            </div>
+
+            
+    
+    
+    <button class="a8-icon-button close-button js-close-button
+             " data-component="a8-icon-button" title="Close">
+      
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+      
+    </button>
+  
+          </header>
+          
+          
+          
+          
+          
+          
+          
+        <div class="grid">
+          <div class="col col-12 col-m-6 col-m-push-3 col-l-6 col-l-push-3">
+
+                
+  
+<div class="m58-search-bar" data-component="m58-search-bar" data-live-search="true" data-search-on-enter="true" data-search-type="colors">
+  
+  
+    
+  
+  <form method="GET" novalidate class="js-form" data-suggestions-api="/bin/api/colorSearch?page=/content/akzonobel-coatings/anaac/us/en">
+    <div class="search-bar-wrapper body-copy-s">
+      <input type="text" class="search-input js-search-input" id="search-input" placeholder="Search color" aria-label="Search Box" role="search"/>
+      
+  <span class="icon search-icon" data-component="icon" data-icon="search"></span>
+
+      <div class="clear-button js-clear-button-wrapper">
+        
+  
+  
+  
+
+  <button class="a2-text-link body-copy-s js-clear-button  " type="button" data-component="a2-text-link" data-label="Clear" target="_self">
+    
+    
+    <div class="text-link-label ">
+      <span>Clear</span>
+      
+    </div>
+    
+    
+    
+  </button>
+
+      </div>
+      <div class="product-suggestion-container js-product-suggestion-container" data-no-results-title="No result found" data-no-results-content="Sorry, we couldn&#39;t find any results" data-show-all-label="Show all results" data-no-result-label="No result found" data-is-color-popup="true" data-is-sustainable2d-enabled="false">
+      </div>
+    </div>
+  </form>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="state-content">
+	      <div data-component="overlay-state" class="overlay-state" data-state="start">
+
+
+          <div class="hue-list js-huelist-container">
+            <!-- JS will load the hue list from m17-hue-selector -->
+          </div>
+          <div class="hue-list js-reset-container">
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <button data-component="a126-secondary-button" class="a126-secondary-button  
+              js-reset-button
+            " target="_self">
+      
+      
+      <span class="cta-text body-copy-rg">Reset</span>
+    </button>
+  
+          </div>
+          <div class="divider"></div>
+          <div class="color-collection-search-listing js-color-list">
+            <div class="content-wrapper">
+              <div class="grid">
+                  <div class="col col-12 result-listing-title js-color-heading" data-transition-item>
+                    <!-- JS will load the color heading from a1-heading -->
+                  </div>
+              </div>
+            </div>
+            <div class="content-wrapper js-color-list-container">
+              <!-- JS will load the color list from m8-hue-selector -->
+            </div>
+          </div>
+          <div class="no-hue js-noHue-container">Sorry, we couldn&#39;t find any results</div>
+        </div>
+
+      </div>
+    </div>
+    
+  <div class="loading-indicator" data-component="loading-indicator">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38">
+      <g fill="none" fill-rule="evenodd" stroke-width="2" transform="translate(1 1)">
+        <circle cx="18" cy="18" r="18" stroke-opacity=".5"/>
+        <path d="M36 18c0-9.94-8.06-18-18-18">
+          <animateTransform attributeName="transform" dur="1s" from="0 18 18" repeatCount="indefinite" to="360 18 18" type="rotate"/>
+        </path>
+      </g>
+    </svg> 
+    <div class="loading-text">Fetching the data, please wait...</div>
+  </div>
+
+  </section>
+  <!-- END TRANSITION COMPONENT -->
+</div>
+
+
+  
+    <section data-component="m119-bim-download-overlay" class="m119-bim-download-overlay">
+        <div class="mask js-mask"></div>
+        <div class="modal js-modal">
+            <div class="content-wrapper">
+                <header>
+                    <div class="col col-12 result-listing-title js-popup-heading" data-transition-item>
+                        <p class='heading-title header-03 js-heading'></p>
+                        <p class='heading-title header-03 js-subheading'></p>
+                    </div>
+                    
+    
+    
+    <button class="a8-icon-button close-button js-close-button
+             " data-component="a8-icon-button" title="Close">
+      
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+      
+    </button>
+  
+                </header>
+            </div>
+            <div class="state-content">
+                <div data-component="overlay-state" class="overlay-state" data-state="start">
+                    <div class="select-menu-option js-radio-options"></div>
+                    <div class="btn-container">
+                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <button data-component="a122-primary-button" class="a122-primary-button  
+              js-download-btn   " data-icon-alignment="left">
+      
+  <span class="icon " data-component="icon" data-icon="download"></span>
+
+      
+      <span class="cta-text body-copy-rg">Download</span>
+      
+      
+    </button>
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+  
+    <section data-component="m120-geolocation-switch-overlay" class="m120-geolocation-switch-overlay">
+        <div class="mask js-mask"></div>
+        <div class="modal js-modal">
+            <div class="content-wrapper">
+                <header>
+                    
+    
+    
+    <button class="a8-icon-button close-button js-close-button
+             " data-component="a8-icon-button" title="Close">
+      
+  <span class="icon " data-component="icon" data-icon="cross"></span>
+
+      
+    </button>
+  
+                </header>
+            </div>
+            <div class="state-content">
+                <div data-component="overlay-state" class="overlay-state" data-state="start">
+                    <div class="geolocation-switch-message js-geolocation-switch-message">
+                      <!-- Geolocation popup content will be injected -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <script type="text/javascript">
+    var msie = window.navigator.userAgent.indexOf('MSIE ');
+    var trident = window.navigator.userAgent.indexOf('Trident/');
+
+    if (msie > 0 || trident > 0) {
+      var messageContainer = document.createElement('div');
+      messageContainer.setAttribute('class', 'unsupported-message');
+      messageContainer.innerHTML = '<p class="body-copy-rg">Your current browser is not supported. For better results, please view in Microsoft Edge, Chrome, Firefox or your smartphone browser.</p>';
+      messageContainer.addEventListener('click', function() {
+        document.body.removeChild(messageContainer);
+      });
+      document.body.appendChild(messageContainer);
+    }
+  </script>
+</main>
+
+  
+    
+    
+
+
+    
+  
+<script data-ot-ignore src="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-react-app.min.js"></script>
+
+  
+
+    
+  
+<script data-ot-ignore src="/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
+<script data-ot-ignore src="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-base.min.js"></script>
+
+  
+
+    
+  
+<script data-ot-ignore src="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-site-nodemodules.min.js"></script>
+<script data-ot-ignore src="/etc.clientlibs/akzonobel-common/clientlibs/clientlib-site-flourish.min.js"></script>
+
+  
+
+    
+
+
+    
+
+    
+
+    
+
+  
+
+
+
+
+  <footer>
+      
+      
+      
+  </footer>
+
+
+</body>
+</html>
