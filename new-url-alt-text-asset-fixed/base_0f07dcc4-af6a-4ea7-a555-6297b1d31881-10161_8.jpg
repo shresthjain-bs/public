@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
+    <g id="chevron">
+        <path d="M6.618 10.99L5.52 12 0 6.005 5.52 0l1.1 1-4.6 4.994z" transform="matrix(0 -1 1 0 0 7)" fill="#000" fill-rule="evenodd"/>
+    </g>
+</svg>

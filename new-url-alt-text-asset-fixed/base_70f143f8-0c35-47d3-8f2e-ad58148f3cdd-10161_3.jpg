@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.63 286.96">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0094cd;
+      }
+
+      .cls-2 {
+        font-size: 40.42px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-4 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        stroke: #fff;
+        stroke-width: 8px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-6 {
+        stroke: #0094cd;
+        stroke-width: 3px;
+      }
+
+      .cls-4 {
+        font-size: 15.74px;
+        letter-spacing: .1em;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="79.26 218.52 79.26 286.96 117.04 269.19 117.04 218.52 79.26 218.52"/>
+  <polygon class="cls-1" points="159.7 218.52 159.7 286.96 121.93 269.19 121.93 218.52 159.7 218.52"/>
+  <circle class="cls-1" cx="118.81" cy="118.81" r="118.81"/>
+  <circle class="cls-5" cx="120" cy="120" r="108.74"/>
+  <g>
+    <circle class="cls-3" cx="80.15" cy="80.44" r="4.59"/>
+    <circle class="cls-3" cx="157.48" cy="80.44" r="4.59"/>
+    <circle class="cls-3" cx="89.33" cy="65.78" r="4.59"/>
+    <circle class="cls-3" cx="148.3" cy="65.78" r="4.59"/>
+    <circle class="cls-3" cx="102.52" cy="56.59" r="4.59"/>
+    <circle class="cls-3" cx="135.11" cy="56.59" r="4.59"/>
+    <circle class="cls-3" cx="118.81" cy="52" r="4.59"/>
+  </g>
+  <text class="cls-2" transform="translate(24.58 132.25)"><tspan x="0" y="0">ISO 27001</tspan></text>
+  <text class="cls-4" transform="translate(68.51 157.95)"><tspan x="0" y="0">CERTIFIED</tspan></text>
+  <circle class="cls-3" cx="118.81" cy="194.96" r="16"/>
+  <line class="cls-6" x1="118.81" y1="184.07" x2="118.81" y2="205.85"/>
+  <line class="cls-6" x1="129.7" y1="194.96" x2="107.93" y2="194.96"/>
+</svg>
