@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Text Contrast Benchmark — all cases the solution must resolve</title>
+<style>
+  :root { --photo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='200'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232d5a27'/%3E%3Cstop offset='.5' stop-color='%236aa84f'/%3E%3Cstop offset='1' stop-color='%231a3317'/%3E%3C/linearGradient%3E%3Cfilter id='b'%3E%3CfeGaussianBlur stdDeviation='8'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='600' height='200' fill='url(%23g)'/%3E%3Cg filter='url(%23b)'%3E%3Cellipse cx='100' cy='60' rx='80' ry='40' fill='%2390c878' opacity='.8'/%3E%3Cellipse cx='320' cy='140' rx='100' ry='50' fill='%23204a1c' opacity='.9'/%3E%3Cellipse cx='480' cy='50' rx='70' ry='60' fill='%23b8e0a0' opacity='.7'/%3E%3Cellipse cx='220' cy='100' rx='60' ry='80' fill='%23416e38' opacity='.8'/%3E%3C/g%3E%3C/svg%3E"); }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 32px; background: #fafafa; color: #222;
+         font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  h1 { font-size: 22px; } h2 { font-size: 17px; margin: 40px 0 6px; border-bottom: 2px solid #ddd; padding-bottom: 4px; }
+  .sect-desc { font-size: 12px; color: #777; margin: 0 0 16px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 14px; }
+  .case { width: 460px; }
+  .meta { font-family: ui-monospace, Menlo, monospace; font-size: 10px; color: #888; margin-bottom: 3px; }
+  .meta b { color: #444; }
+  .expect-PASS { color: #2e7d32; } .expect-FAIL { color: #c62828; } .expect-REVIEW { color: #ef6c00; }
+  .target { border: 1px dashed #ccc; padding: 14px 18px; background: #ffffff; position: relative; min-height: 52px; }
+  .target p, .target span, .target div { margin: 0; }
+  .fs14 { font-size: 14px; font-weight: 400; } .fs24 { font-size: 24px; font-weight: 400; }
+  .fs12 { font-size: 12px; } .fs10 { font-size: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Text Contrast Benchmark</h1>
+<p class="sect-desc">Every case the deterministic contrast solution must resolve. Each croppable target has a stable
+<code>id</code> and <code>data-expect</code> (PASS / FAIL / REVIEW), <code>data-ratio</code> (worst-pair WCAG ratio where
+computable), and <code>data-note</code>. Crop <code>.target</code> rects by id. Thresholds: 4.5:1 normal text, 3:1 for ≥24px.
+Manifest: <code>window.TC_MANIFEST</code>.</p>
+
+<!-- ============================================================ -->
+<h2>A — Contrast ladder · solid text on solid background</h2>
+<p class="sect-desc">Same sentence across the full quality spectrum: very good → good → borderline pass → borderline fail → bad → very bad. Plus the large-text threshold pair and tiny/thin AA-regime variants.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>A01</b> 21.00:1 very good · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="A01" data-expect="PASS" data-ratio="21.00" data-cat="solid-solid" data-note="black on white reference">
+  <p class="fs14" style="color:#000000">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A02</b> 7.00:1 good · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="A02" data-expect="PASS" data-ratio="7.00" data-cat="solid-solid" data-note="AAA boundary">
+  <p class="fs14" style="color:#595959">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A03</b> 4.54:1 borderline-pass · <span class="expect-PASS">PASS</span> (REVIEW acceptable)</div>
+<div class="target" id="A03" data-expect="PASS" data-ratio="4.54" data-cat="solid-solid" data-note="just above 4.5 — inside MARGIN_RATIO band">
+  <p class="fs14" style="color:#767676">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A04</b> 4.23:1 borderline-fail · <span class="expect-FAIL">FAIL</span> (REVIEW acceptable)</div>
+<div class="target" id="A04" data-expect="FAIL" data-ratio="4.23" data-cat="solid-solid" data-note="just below 4.5 — inside MARGIN_RATIO band">
+  <p class="fs14" style="color:#7b7b7b">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A05</b> 3.03:1 not good · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="A05" data-expect="FAIL" data-ratio="3.03" data-cat="solid-solid" data-note="">
+  <p class="fs14" style="color:#949494">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A06</b> 2.10:1 bad · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="A06" data-expect="FAIL" data-ratio="2.10" data-cat="solid-solid" data-note="">
+  <p class="fs14" style="color:#b3b3b3">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A07</b> 1.43:1 very bad · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="A07" data-expect="FAIL" data-ratio="1.43" data-cat="solid-solid" data-note="barely visible">
+  <p class="fs14" style="color:#d8d8d8">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A08</b> 3.03:1 at 24px (large-text 3:1) · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="A08" data-expect="PASS" data-ratio="3.03" data-font-px="24" data-cat="solid-solid" data-note="same color as A05 — PASSES only because large text">
+  <p class="fs24" style="color:#949494">Large heading text</p></div></div>
+
+<div class="case"><div class="meta"><b>A09</b> 3.03:1 at 14px (normal 4.5:1) · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="A09" data-expect="FAIL" data-ratio="3.03" data-font-px="14" data-cat="solid-solid" data-note="threshold pair with A08 — verdict must flip on font size alone">
+  <p class="fs14" style="color:#949494">Same color, small text — fails</p></div></div>
+
+<div class="case"><div class="meta"><b>A10</b> 5.28:1 white on prod purple · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="A10" data-expect="PASS" data-ratio="5.28" data-cat="solid-solid" data-note="prod cluster B — the AA-unmix poster child" style="background:#902cfe">
+  <p class="fs14" style="color:#ffffff">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A11</b> 4.12:1 white on teal · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="A11" data-expect="FAIL" data-ratio="4.12" data-cat="solid-solid" data-note="prod ref color #1987ac" style="background:#1987ac">
+  <p class="fs14" style="color:#ffffff">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A12</b> 10.44:1 dark on pink · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="A12" data-expect="PASS" data-ratio="10.44" data-cat="solid-solid" data-note="prod cluster A colors" style="background:#ffd6d8">
+  <p class="fs12" style="color:#501b21">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A13</b> 15.91:1 light-on-dark · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="A13" data-expect="PASS" data-ratio="15.91" data-cat="solid-solid" data-note="inverted polarity" style="background:#222222">
+  <p class="fs14" style="color:#ffffff">The quick brown fox jumps over the lazy dog</p></div></div>
+
+<div class="case"><div class="meta"><b>A14</b> 4.54:1 at 12px — AA regime · <span class="expect-PASS">PASS</span> (REVIEW acceptable)</div>
+<div class="target" id="A14" data-expect="PASS" data-ratio="4.54" data-font-px="12" data-cat="solid-solid" data-note="borderline + tiny = hardest deterministic case; 55% of prod is 12px">
+  <p class="fs12" style="color:#767676">The quick brown fox jumps over the lazy dog 12px</p></div></div>
+
+<div class="case"><div class="meta"><b>A15</b> thin 300 vs bold 700 at 12px · <span class="expect-PASS">PASS</span> both</div>
+<div class="target" id="A15" data-expect="PASS" data-ratio="7.00" data-font-px="12" data-cat="solid-solid" data-note="same color, stroke width varies — AA-blend severity differs">
+  <p class="fs12" style="color:#595959;font-weight:300">Thin weight 300 strokes are sub-pixel</p>
+  <p class="fs12" style="color:#595959;font-weight:700">Bold weight 700 strokes have cores</p></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>B — Text color structure</h2>
+<p class="sect-desc">Single color → per-word colors → per-character colors → multi-color inside one glyph → gradient text → the production "low-contrast link in a paragraph" case → shadow/stroke rescues.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>B01</b> single color control · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="B01" data-expect="PASS" data-ratio="8.59" data-cat="fg-structure" data-note="one region expected">
+  <p class="fs14" style="color:#1565c0">Single uniform text color</p></div></div>
+
+<div class="case"><div class="meta"><b>B02</b> per-word colors, all passing · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="B02" data-expect="PASS" data-ratio="4.60" data-cat="fg-structure" data-note="3 regions, min ratio 4.60 (#c62828)">
+  <p class="fs14"><span style="color:#c62828">Error:</span> <span style="color:#1565c0">invalid email</span> <span style="color:#2e7d32">try again</span></p></div></div>
+
+<div class="case"><div class="meta"><b>B03</b> per-word colors, ONE failing word · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="B03" data-expect="FAIL" data-ratio="1.63" data-cat="fg-structure" data-note="verdict = worst region; #e6c789 word fails at 1.63">
+  <p class="fs14"><span style="color:#222222">Read the</span> <span style="color:#e6c789">highlighted terms</span> <span style="color:#222222">before signing</span></p></div></div>
+
+<div class="case"><div class="meta"><b>B04</b> per-character rainbow · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="B04" data-expect="REVIEW" data-ratio="1.74" data-cat="fg-structure" data-note="every char its own region; worst char = yellow #f1c40f at 1.74 → strictly FAIL">
+  <p class="fs24" style="font-weight:700"><span style="color:#e74c3c">R</span><span style="color:#e67e22">a</span><span style="color:#f1c40f">i</span><span style="color:#2ecc71">n</span><span style="color:#1abc9c">b</span><span style="color:#3498db">o</span><span style="color:#9b59b6">w</span> <span style="color:#34495e">text</span></p></div></div>
+
+<div class="case"><div class="meta"><b>B05</b> multi-color inside ONE glyph · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="B05" data-expect="REVIEW" data-ratio="" data-cat="fg-structure" data-note="single character with vertical gradient — no single FG color exists">
+  <p class="fs24" style="font-weight:800"><span style="background:linear-gradient(180deg,#c62828 0%,#1565c0 100%);-webkit-background-clip:text;background-clip:text;color:transparent">G</span><span style="color:#222222">radient glyph</span></p></div></div>
+
+<div class="case"><div class="meta"><b>B06</b> gradient text, one end fails · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="B06" data-expect="FAIL" data-ratio="1.43" data-cat="fg-structure" data-note="left #111 passes, right #d8d8d8 fails on white — worst pixel governs">
+  <p class="fs24" style="font-weight:700;background:linear-gradient(90deg,#111111,#d8d8d8);-webkit-background-clip:text;background-clip:text;color:transparent">Fading gradient headline</p></div></div>
+
+<div class="case"><div class="meta"><b>B07</b> gradient text, all passing · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="B07" data-expect="PASS" data-ratio="5.85" data-cat="fg-structure" data-note="navy→maroon, both ends ≥5.8 on white">
+  <p class="fs24" style="font-weight:700;background:linear-gradient(90deg,#1a237e,#7b1e1e);-webkit-background-clip:text;background-clip:text;color:transparent">Safe gradient headline</p></div></div>
+
+<div class="case"><div class="meta"><b>B08</b> low-contrast link in paragraph (prod case) · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="B08" data-expect="FAIL" data-ratio="1.63" data-cat="fg-structure" data-note="exact pattern seen in prod: black para + pale underlined link">
+  <p class="fs14" style="color:#1c1c1c">If you want delivery in another country, please go to <a href="#" style="color:#e6c789">this website</a>.</p></div></div>
+
+<div class="case"><div class="meta"><b>B09</b> text-shadow rescue · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="B09" data-expect="REVIEW" data-ratio="1.37" data-cat="fg-structure" data-note="#ffd966 on white = 1.37 FAIL, but heavy dark shadow makes it readable — pixel vs spec disagree" style="background:#ffffff">
+  <p class="fs24" style="font-weight:800;color:#ffd966;text-shadow:0 0 4px #000,0 1px 2px #000">Shadowed yellow title</p></div></div>
+
+<div class="case"><div class="meta"><b>B10</b> text-stroke rescue · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="B10" data-expect="REVIEW" data-ratio="1.37" data-cat="fg-structure" data-note="fill fails but 1.5px dark outline carries legibility">
+  <p class="fs24" style="font-weight:800;color:#ffd966;-webkit-text-stroke:1.5px #333333">Outlined yellow title</p></div></div>
+
+<div class="case"><div class="meta"><b>B11</b> italic + bold + underline mix · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="B11" data-expect="PASS" data-ratio="12.63" data-cat="fg-structure" data-note="style variation, single color — must stay one region">
+  <p class="fs14" style="color:#111111">You are connected to the <i>Nespresso</i> website, see <b><u>delivery options</u></b>.</p></div></div>
+
+<div class="case"><div class="meta"><b>B12</b> emoji mixed with text · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="B12" data-expect="PASS" data-ratio="12.63" data-cat="fg-structure" data-note="emoji glyphs must not become FG regions (known v5 gap)">
+  <p class="fs14" style="color:#111111">Order shipped 🎉📦 arriving Tuesday ✅</p></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>C — Background structure</h2>
+<p class="sect-desc">Solid → gradients (subtle/strong/radial/conic/hard-stop) → patterns → photo with and without scrim → photo with text-like texture (OCR phantom trap) → split backgrounds.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>C01</b> subtle gradient, both ends pass · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="C01" data-expect="PASS" data-ratio="14.0" data-cat="bg-structure" data-note="#fff→#eee barely varies" style="background:linear-gradient(90deg,#ffffff,#e8e8e8)">
+  <p class="fs14" style="color:#1c1c1c">Text over a subtle near-white gradient</p></div></div>
+
+<div class="case"><div class="meta"><b>C02</b> strong gradient, one end fails · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="C02" data-expect="FAIL" data-ratio="1.92" data-cat="bg-structure" data-note="white text: PASS on #222 end (15.9), FAIL on #bbb end (1.92) — worst local BG governs" style="background:linear-gradient(90deg,#222222,#bbbbbb)">
+  <p class="fs14" style="color:#ffffff">White text crossing dark-to-light gradient ends here</p></div></div>
+
+<div class="case"><div class="meta"><b>C03</b> hard-stop stripes · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="C03" data-expect="FAIL" data-ratio="1.92" data-cat="bg-structure" data-note="alternating #333/#bbb stripes — k-means must find 2 BG clusters" style="background:repeating-linear-gradient(90deg,#333333 0 60px,#bbbbbb 60px 120px)">
+  <p class="fs14" style="color:#ffffff">White text over alternating dark and light stripes</p></div></div>
+
+<div class="case"><div class="meta"><b>C04</b> radial gradient spotlight · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="C04" data-expect="FAIL" data-ratio="1.4" data-cat="bg-structure" data-note="dark text, bright center / dark edges" style="background:radial-gradient(circle at 50% 50%,#f5f5f5 0%,#555555 100%)">
+  <p class="fs14" style="color:#333333">Dark text over a radial spotlight background</p></div></div>
+
+<div class="case"><div class="meta"><b>C05</b> conic gradient · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="C05" data-expect="REVIEW" data-ratio="" data-cat="bg-structure" data-note="BG hue rotates under the text" style="background:conic-gradient(from 90deg at 50% 50%,#ffadad,#ffd6a5,#fdffb6,#caffbf,#9bf6ff,#a0c4ff,#bdb2ff,#ffc6ff,#ffadad)">
+  <p class="fs14" style="color:#1c1c1c;font-weight:600">Text over a conic rainbow wheel background</p></div></div>
+
+<div class="case"><div class="meta"><b>C06</b> checkerboard pattern · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="C06" data-expect="FAIL" data-ratio="2.1" data-cat="bg-structure" data-note="high-frequency BG; worst cell is #b3b3b3" style="background:repeating-conic-gradient(#ffffff 0% 25%, #b3b3b3 0% 50%) 0 0/28px 28px">
+  <p class="fs14" style="color:#fefefe;font-weight:600">Light text over a checkerboard pattern</p></div></div>
+
+<div class="case"><div class="meta"><b>C07</b> photo BG, no scrim · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="C07" data-expect="REVIEW" data-ratio="" data-cat="bg-structure" data-note="prod leaf-photo case; white text — bright leaf pixels fail, dark pass" style="background:var(--photo);background-size:cover">
+  <p class="fs14" style="color:#ffffff">Gebruik de filters om jouw koffies te vinden</p></div></div>
+
+<div class="case"><div class="meta"><b>C08</b> photo BG + dark scrim · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="C08" data-expect="PASS" data-ratio="7.5" data-cat="bg-structure" data-note="scrim guarantees worst pixel ≥ ~7:1 for white" style="background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),var(--photo);background-size:cover">
+  <p class="fs14" style="color:#ffffff">White text protected by a dark scrim layer</p></div></div>
+
+<div class="case"><div class="meta"><b>C09</b> photo with text-like texture · <span class="expect-PASS">PASS</span> (no phantom regions)</div>
+<div class="target" id="C09" data-expect="PASS" data-ratio="9.7" data-cat="bg-structure" data-note="thin vein squiggles around real text — Tesseract phantom-character trap" style="background:#f2efe6 url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='120'%3E%3Cg stroke='%23c9c2a8' stroke-width='1' fill='none'%3E%3Cpath d='M10 20 q 20 -15 40 0 t 40 0 t 40 0'/%3E%3Cpath d='M30 90 q 15 12 30 0 t 30 0 t 30 0 t 30 0'/%3E%3Cpath d='M220 30 q 10 -10 20 0 t 20 0 t 20 0 t 20 0 t 20 0'/%3E%3Cpath d='M250 100 q 12 10 24 0 t 24 0 t 24 0'/%3E%3Cpath d='M60 55 l 8 -6 l 8 6 l 8 -6'/%3E%3Cpath d='M320 60 l 6 5 l 6 -5 l 6 5 l 6 -5'/%3E%3C/g%3E%3C/svg%3E&quot;)">
+  <p class="fs14" style="color:#3a3326;font-weight:600">Real text among vein-like squiggles</p></div></div>
+
+<div class="case"><div class="meta"><b>C10</b> split background halves · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="C10" data-expect="FAIL" data-ratio="1.6" data-cat="bg-structure" data-note="one sentence spans dark and light halves — passes left, fails right" style="background:linear-gradient(90deg,#173a5e 0 50%,#cfd8dc 50% 100%)">
+  <p class="fs14" style="color:#e3f2fd">This sentence crosses from the dark half into the light half</p></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>D — Text on image &amp; image containing text</h2>
+<p class="sect-desc">HTML text positioned over &lt;img&gt; · images whose pixels already contain text (no DOM text) · CSS background-image · both at once.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>D01</b> HTML text over &lt;img&gt; element · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="D01" data-expect="REVIEW" data-ratio="" data-cat="image" data-note="img tag + absolutely positioned caption; worst pixel under glyphs governs" style="padding:0">
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='90'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23344b62'/%3E%3Cstop offset='.6' stop-color='%237e9ab5'/%3E%3Cstop offset='1' stop-color='%23dfe9f2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='90' fill='url(%23s)'/%3E%3Ccircle cx='480' cy='30' r='18' fill='%23fff8e1'/%3E%3C/svg%3E" style="display:block;width:100%;height:90px;object-fit:cover" alt="">
+  <p class="fs14" style="position:absolute;left:18px;top:34px;color:#ffffff;font-weight:600">Caption over an inline image element</p></div></div>
+
+<div class="case"><div class="meta"><b>D02</b> image PIXELS contain the text (no DOM text) · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="D02" data-expect="REVIEW" data-ratio="2.85" data-cat="image" data-note="text baked into raster — DOM/CSS knows nothing; only OCR/pixels can judge. Baked gray-on-white ≈2.85" style="padding:0">
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='70'%3E%3Crect width='600' height='70' fill='%23f7f7f7'/%3E%3Ctext x='20' y='44' font-family='Arial' font-size='24' font-weight='bold' fill='%23999999'%3EBaked-in raster headline%3C/text%3E%3C/svg%3E" style="display:block;width:100%;height:70px" alt=""></div></div>
+
+<div class="case"><div class="meta"><b>D03</b> CSS background-image + text · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="D03" data-expect="PASS" data-ratio="8.0" data-cat="image" data-note="bg-image dark enough everywhere under glyphs" style="background:var(--photo);background-size:cover;background-position:0 70%">
+  <p class="fs14" style="color:#ffffff;font-weight:700;text-shadow:none;background:rgba(0,0,0,.55);display:inline;padding:2px 6px">Label with its own backing plate</p></div></div>
+
+<div class="case"><div class="meta"><b>D04</b> baked text AND html overlay text · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="D04" data-expect="REVIEW" data-ratio="" data-cat="image" data-note="two text sources in one crop — one DOM, one raster" style="padding:0">
+  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='90'%3E%3Crect width='600' height='90' fill='%23263238'/%3E%3Ctext x='20' y='30' font-family='Arial' font-size='16' fill='%23607d8b'%3ESALE ends Friday (raster)%3C/text%3E%3C/svg%3E" style="display:block;width:100%;height:90px" alt="">
+  <p class="fs14" style="position:absolute;left:20px;top:48px;color:#eceff1">DOM text below the raster text</p></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>E — Opacity</h2>
+<p class="sect-desc">Alpha in the color itself · element opacity · nested ancestor opacity · disabled patterns. Declared CSS color ≠ user-seen color in every case here.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>E01</b> rgba color alpha .5 · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="E01" data-expect="FAIL" data-ratio="2.74" data-cat="opacity" data-note="declared #cc0000 (5.89 PASS) but user sees #e68080 (2.74 FAIL)">
+  <p class="fs14" style="color:rgba(204,0,0,.5);font-weight:600">Half-transparent red text on white</p></div></div>
+
+<div class="case"><div class="meta"><b>E02</b> element opacity .65 on purple (prod case) · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="E02" data-expect="FAIL" data-ratio="3.01" data-cat="opacity" data-note="declared #fff (5.28 PASS); rendered #d8b5fe = 3.01 FAIL" style="background:#902cfe">
+  <div style="opacity:.65"><p class="fs14" style="color:#ffffff;font-weight:600">Faded white text on saturated purple</p></div></div></div>
+
+<div class="case"><div class="meta"><b>E03</b> nested opacity .8 × .6 · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="E03" data-expect="FAIL" data-ratio="3.74" data-cat="opacity" data-note="effective alpha .48; black declared 21.0 but user sees #858585 = 3.74">
+  <div style="opacity:.8"><div style="opacity:.6"><p class="fs14" style="color:#000000">Doubly faded black text</p></div></div></div></div>
+
+<div class="case"><div class="meta"><b>E04</b> opacity .9, still passing · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="E04" data-expect="PASS" data-ratio="15.5" data-cat="opacity" data-note="opacity present but contrast survives — must NOT over-defer">
+  <div style="opacity:.9"><p class="fs14" style="color:#111111">Slightly faded but clearly readable</p></div></div></div>
+
+<div class="case"><div class="meta"><b>E05</b> disabled button (opacity .38) · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="E05" data-expect="FAIL" data-ratio="2.2" data-cat="opacity" data-note="Material-style disabled; intentional but still a WCAG fail">
+  <button style="opacity:.38;font-size:14px;padding:8px 18px;background:#1565c0;color:#ffffff;border:none;border-radius:4px">Submit order</button></div></div>
+
+<div class="case"><div class="meta"><b>E06</b> placeholder-gray input text · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="E06" data-expect="FAIL" data-ratio="2.6" data-cat="opacity" data-note="placeholder #a5a5a5 on #fff — extremely common real-world fail">
+  <input style="font-size:14px;padding:8px 12px;border:1px solid #ddd;border-radius:4px;width:90%" placeholder="Search for coffee machines…"></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>F — Overlays</h2>
+<p class="sect-desc">Transparent / semi-transparent / fully opaque; fully covering vs partially covering; blur scrims; blend modes. The DOM color is right but something sits between the text and the user.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>F01</b> transparent overlay, fully covering, washes out · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="F01" data-expect="FAIL" data-ratio="2.85" data-cat="overlay" data-note="rgba(255,255,255,.6) over black text → user sees #999 = 2.85">
+  <p class="fs14" style="color:#000000">Black text washed out by a white veil overlay</p>
+  <div style="position:absolute;inset:0;background:rgba(255,255,255,.6)"></div></div></div>
+
+<div class="case"><div class="meta"><b>F02</b> transparent overlay, contrast survives · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="F02" data-expect="PASS" data-ratio="13.0" data-cat="overlay" data-note="light .15 veil — must NOT flip the verdict">
+  <p class="fs14" style="color:#000000">Black text under a barely-there veil</p>
+  <div style="position:absolute;inset:0;background:rgba(255,255,255,.15)"></div></div></div>
+
+<div class="case"><div class="meta"><b>F03</b> OPAQUE overlay fully covering · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="F03" data-expect="REVIEW" data-ratio="" data-cat="overlay" data-note="text exists in DOM but is 100% hidden — pixels see no text at all">
+  <p class="fs14" style="color:#000000">You should not be able to read this sentence</p>
+  <div style="position:absolute;inset:0;background:#e0e0e0"></div></div></div>
+
+<div class="case"><div class="meta"><b>F04</b> opaque overlay PARTIALLY covering · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="F04" data-expect="REVIEW" data-ratio="" data-cat="overlay" data-note="right 45% of the sentence hidden behind an opaque card">
+  <p class="fs14" style="color:#1c1c1c">The ending of this long sentence is hidden behind a card</p>
+  <div style="position:absolute;top:0;bottom:0;right:0;width:45%;background:#cfd8dc;border-left:1px solid #b0bec5"></div></div></div>
+
+<div class="case"><div class="meta"><b>F05</b> semi-transparent overlay partially covering · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="F05" data-expect="REVIEW" data-ratio="" data-cat="overlay" data-note="left half clear (PASS), right half scrimmed (FAIL) — verdict differs by half">
+  <p class="fs14" style="color:#1c1c1c">Half of this sentence is clear and half is veiled</p>
+  <div style="position:absolute;top:0;bottom:0;right:0;width:50%;background:rgba(255,255,255,.65)"></div></div></div>
+
+<div class="case"><div class="meta"><b>F06</b> backdrop-filter blur scrim (glassmorphism) · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="F06" data-expect="REVIEW" data-ratio="" data-cat="overlay" data-note="frosted glass over photo; effective BG only exists in pixels" style="background:var(--photo);background-size:cover;padding:0">
+  <div style="backdrop-filter:blur(6px);background:rgba(255,255,255,.25);padding:14px 18px">
+    <p class="fs14" style="color:#10330e;font-weight:600">Frosted glass card over the photo</p></div></div></div>
+
+<div class="case"><div class="meta"><b>F07</b> modal dim overlay over content · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="F07" data-expect="FAIL" data-ratio="" data-cat="overlay" data-note="background page text dimmed by modal backdrop rgba(0,0,0,.5) — common crop when modal opens">
+  <p class="fs14" style="color:#444444">Background page text behind an open modal dialog</p>
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,.5)"></div></div></div>
+
+<div class="case"><div class="meta"><b>F08</b> mix-blend-mode text · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="F08" data-expect="REVIEW" data-ratio="" data-cat="overlay" data-note="multiply blend — rendered color = f(text, bg), not the declared #888" style="background:#ffcc00;isolation:isolate">
+  <p class="fs14" style="color:#888888;mix-blend-mode:multiply;font-weight:600">Blended text on amber background</p></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>G — Real-world edge cases (seen in the 1000-crop prod review)</h2>
+<p class="sect-desc">Tiny text, single characters, clipped text, buttons, wide-tracked caps, empty crops, invisible text, code strings.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>G01</b> tiny 10px text · <span class="expect-PASS">PASS</span> (REVIEW acceptable)</div>
+<div class="target" id="G01" data-expect="PASS" data-ratio="7.0" data-font-px="10" data-cat="edge" data-note="fully AA-dominated strokes">
+  <p class="fs10" style="color:#595959">Privacy · Terms · Cookie settings · Imprint</p></div></div>
+
+<div class="case"><div class="meta"><b>G02</b> single character · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="G02" data-expect="PASS" data-ratio="8.6" data-cat="edge" data-note="prod crop was a lone digit — one char, no context">
+  <p class="fs14" style="color:#1565c0;font-weight:700">3</p></div></div>
+
+<div class="case"><div class="meta"><b>G03</b> text clipped by container · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="G03" data-expect="REVIEW" data-ratio="12.6" data-cat="edge" data-note="glyphs cut at both edges like prod MACHINES crop" style="overflow:hidden;padding:14px 0">
+  <p class="fs24" style="color:#111111;font-weight:700;letter-spacing:4px;margin-left:-12px;white-space:nowrap">MACHINES AND ACCESSORIES</p></div></div>
+
+<div class="case"><div class="meta"><b>G04</b> underlined link standalone · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="G04" data-expect="FAIL" data-ratio="2.0" data-cat="edge" data-note="underline stroke must not corrupt FG estimate">
+  <a href="#" class="fs14" style="color:#b8b8b8">Forgot your password?</a></div></div>
+
+<div class="case"><div class="meta"><b>G05</b> button pill + icon · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="G05" data-expect="PASS" data-ratio="5.13" data-cat="edge" data-note="prod HM-Test pill; icon shape must not become a char">
+  <button style="font-size:14px;padding:8px 20px;background:#2e7d32;color:#ffffff;border:none;border-radius:18px;font-weight:600">HM Test &nbsp;●</button></div></div>
+
+<div class="case"><div class="meta"><b>G06</b> ALL-CAPS wide tracking on translucent bar · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="G06" data-expect="REVIEW" data-ratio="" data-cat="edge" data-note="prod MACHINES pattern: white caps on gray translucent bar over photo" style="background:var(--photo);background-size:cover;padding:0">
+  <div style="background:rgba(80,80,90,.55);padding:10px 18px"><p class="fs14" style="color:#ffffff;font-weight:700;letter-spacing:5px">MACHINES</p></div></div></div>
+
+<div class="case"><div class="meta"><b>G07</b> empty target — no text at all · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="G07" data-expect="REVIEW" data-ratio="" data-cat="edge" data-note="prod had photo/border-only crops; must answer NO_TEXT, not invent regions" style="background:var(--photo);background-size:cover;min-height:64px"></div></div>
+
+<div class="case"><div class="meta"><b>G08</b> white on white (invisible) · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="G08" data-expect="FAIL" data-ratio="1.00" data-cat="edge" data-note="FG==BG; v5 rule: perceptually identical → CONFIDENT_FAIL">
+  <p class="fs14" style="color:#ffffff">This text is white on a white background</p></div></div>
+
+<div class="case"><div class="meta"><b>G09</b> monospace error code · <span class="expect-PASS">PASS</span></div>
+<div class="target" id="G09" data-expect="PASS" data-ratio="9.0" data-cat="edge" data-note="prod iOS-dialog pattern with UUID-like code">
+  <p class="fs12" style="color:#3c3c43;font-family:ui-monospace,Menlo,monospace">error code a01caa06bff5d6bc-IAD in “Describe the issue”</p></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2>H — Kitchen-sink combinations</h2>
+<p class="sect-desc">Multiple dimensions at once — the cases that must route to REVIEW rather than produce a confidently wrong verdict.</p>
+<div class="grid">
+
+<div class="case"><div class="meta"><b>H01</b> gradient text on gradient bg · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="H01" data-expect="REVIEW" data-ratio="" data-cat="combo" data-note="both FG and BG vary along the same axis" style="background:linear-gradient(90deg,#f5f5f5,#37474f)">
+  <p class="fs24" style="font-weight:800;background:linear-gradient(90deg,#37474f,#f5f5f5);-webkit-background-clip:text;background-clip:text;color:transparent">Double gradient crossing</p></div></div>
+
+<div class="case"><div class="meta"><b>H02</b> multi-color text on photo · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="H02" data-expect="REVIEW" data-ratio="" data-cat="combo" data-note="2 FG regions × photo BG clusters" style="background:var(--photo);background-size:cover">
+  <p class="fs14" style="font-weight:700"><span style="color:#ffffff">Fresh deals</span> <span style="color:#ffd966">up to 50% off</span></p></div></div>
+
+<div class="case"><div class="meta"><b>H03</b> opacity + scrim + photo · <span class="expect-REVIEW">REVIEW</span></div>
+<div class="target" id="H03" data-expect="REVIEW" data-ratio="" data-cat="combo" data-note="faded text over a scrimmed image — three compositing layers" style="background:linear-gradient(rgba(20,20,30,.45),rgba(20,20,30,.45)),var(--photo);background-size:cover">
+  <div style="opacity:.8"><p class="fs14" style="color:#ffffff">Faded caption over scrim over photo</p></div></div></div>
+
+<div class="case"><div class="meta"><b>H04</b> failing link in passing para on gradient · <span class="expect-FAIL">FAIL</span></div>
+<div class="target" id="H04" data-expect="FAIL" data-ratio="" data-cat="combo" data-note="B08 × C01: worst (region, local-bg) pair must be found" style="background:linear-gradient(90deg,#ffffff,#ececec)">
+  <p class="fs14" style="color:#1c1c1c">Please review <a href="#" style="color:#cfc3a1">the linked policy</a> before you continue.</p></div></div>
+</div>
+
+<script>
+// Machine-readable manifest of all cases
+window.TC_MANIFEST = [...document.querySelectorAll('.target[id]')].map(el => {
+  const r = el.getBoundingClientRect();
+  return {
+    id: el.id, expect: el.dataset.expect, ratio: el.dataset.ratio || null,
+    category: el.dataset.cat, fontPx: el.dataset.fontPx || null,
+    note: el.dataset.note, rect: { x: r.x, y: r.y, w: r.width, h: r.height },
+  };
+});
+const counts = {};
+for (const m of window.TC_MANIFEST) counts[m.expect] = (counts[m.expect] || 0) + 1;
+document.querySelector('h1').insertAdjacentHTML('afterend',
+  `<p class="sect-desc"><b>${window.TC_MANIFEST.length} cases</b> — ` +
+  Object.entries(counts).map(([k, v]) => `${k}: ${v}`).join(' · ') +
+  ` &nbsp;|&nbsp; <code>copy(JSON.stringify(window.TC_MANIFEST))</code> for the manifest</p>`);
+</script>
+</body>
+</html>
